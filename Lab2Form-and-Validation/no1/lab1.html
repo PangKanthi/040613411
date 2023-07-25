@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1</title>
+</head>
+<style>
+     table,th,td{
+        border: 1px solid green;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    table{
+        margin-top: 25px;
+    }
+    th{
+        align-items: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #ebf1e9;
+
+    }
+    td{
+        align-items: center;
+    }
+    tr:nth-child(odd){
+        background-color: #d5e3cf;
+    }
+    tr:nth-child(even){
+        background-color: #ebf1e9;
+    }
+    td:nth-child(2){
+        padding-right: 25px;
+    }
+    td:nth-child(3){
+        padding: 5px 20px 5px 20px;
+        text-align: center;
+    }
+    td:nth-child(2){
+        padding: 0px 20px 0px 10px;
+    }
+    td:nth-child(1){
+        padding: 0px 10px 0px 10px;
+    }
+
+</style>
+<body>
+    <form>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>ตัวอย่างข้อมูล</th>
+                    <th>Input type?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.</td>
+                    <td>ชื่อเต็ม/ย่อของสาขาวิชา</td>
+                    <td>
+                        <pre>&#60input type="text"&#62</pre>
+                        <input type="text" name="Major" placeholder="CS/Computer Science.">
+                    </td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>จำนวนเงินที่จะโอน</td>
+                    <td>
+                        <pre>&#60input type="number"&#62</pre>
+                        <input type="number" pattern="[\d]+" value="1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย</td>
+                    <td>
+                        <pre>&#60input type="radio"&#62</pre>
+                        <div>
+                            <label>ข้าวหน้าหมูญี่ปุ่น</label>
+                            <input type="radio" name="Eggrice" value="five">5
+                            <input type="radio" name="Eggrice" value="four">4
+                            <input type="radio" name="Eggrice" value="three">3
+                            <input type="radio" name="Eggrice" value="two">2
+                            <input type="radio" name="Eggrice" value="one">1
+                        </div>
+                        <div>
+                            <label>ข้าวแกงกะหรี่ญี่ปุ่น</label>
+                            <input type="radio" name="PorkFireR" value="five">5
+                            <input type="radio" name="PorkFireR" value="four">4
+                            <input type="radio" name="PorkFireR" value="three">3
+                            <input type="radio" name="PorkFireR" value="two">2
+                            <input type="radio" name="PorkFireR" value="one">1
+                        </div>
+                        <div>
+                            <label>ข้าวกะเพราหมูกรอบ</label>
+                            <input type="radio" name="CPork" value="five">5
+                            <input type="radio" name="CPork" value="four">4
+                            <input type="radio" name="CPork" value="three">3
+                            <input type="radio" name="CPork" value="two">2
+                            <input type="radio" name="CPork" value="one">1
+                        </div>
+                        <div>
+                            <label>ข้าวมันไก่</label>
+                            <input type="radio" name="Steak" value="five">5
+                            <input type="radio" name="Steak" value="four">4
+                            <input type="radio" name="Steak" value="three">3
+                            <input type="radio" name="Steak" value="two">2
+                            <input type="radio" name="Steak" value="one">1
+                        </div>
+                        <div>
+                            <label>ต้มเลือดหมู</label>
+                            <input type="radio" name="Salad" value="five">5
+                            <input type="radio" name="Salad" value="four">4
+                            <input type="radio" name="Salad" value="three">3
+                            <input type="radio" name="Salad" value="two">2
+                            <input type="radio" name="Salad" value="one">1
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>ค่าไฟฟ้า 3 เดือนที่ผ่านมา</td>
+                    <td>
+                        <pre>&#60input type="number"&#62</pre>
+                        <input type="number" pattern="[\d]+" value="1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>รหัสบัตรประชาชน</td>
+                    <td>
+                        <pre>&#60input type="text"&#62</pre>
+                        <input type="text" name="CitizenID" placeholder="CitizenID.">
+                    </td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>ความพึงพอใจของหนังสือเล่มนี้</td>
+                    <td>
+                        <pre>&#60input type="radio"&#62</pre>
+                        <input type="radio" name="Ratebook" value="five">5
+                        <input type="radio" name="Ratebook" value="four">4
+                        <input type="radio" name="Ratebook" value="three">3
+                        <input type="radio" name="Ratebook" value="two">2
+                        <input type="radio" name="Ratebook" value="one">1
+                    </td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>อาการป่วย</td>
+                    <td>
+                        <pre>&#60input type="text"&#62</pre>
+                        <input type="text" name="state" placeholder="Sick.">
+                    </td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่</td>
+                    <td>
+                        <pre>&#60input type="radio"&#62</pre>
+                        <input type="radio" name="yesno" value="yes">ใช่
+                        <input type="radio" name="yesno" value="no">ไม่
+                    </td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>รหัสผ่าน</td>
+                    <td>
+                        <pre>&#60input type="password"&#62</pre>
+                        <input type="password" name="Passwd" placeholder="password.">
+                    </td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>เวลาเริ่มเข้าเรียนและสิ้นสุดการเรียน</td>
+                    <td>
+                        <pre>&#60input type="time"&#62</pre>
+                        <input type="time" name="Time">
+                    </td>
+                </tr>
+                <tr>
+                    <td>11.</td>
+                    <td>วันเวลาที่ต้องไปพบแพทย์</td>
+                    <td>
+                        <pre>&#60input type="datetime-local"&#62</pre>
+                        <input type="datetime-local" name="DateTime">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

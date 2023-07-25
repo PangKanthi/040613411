@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3</title>
+</head>
+<style>
+    table,th,td{
+        border: 1px;
+        border-style: solid;
+    }
+    input{
+        border: 1px solid black;
+        
+    }
+    button{
+        margin-top: 20px;
+    }
+
+</style>
+<body>
+    <form action="login.html">
+        <div>
+            <h1>เข้าสู่ระบบ</h1>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="Username" minlength="1" title="Please fill username between 0-9, a-z, A-Z" autofocus required></td>
+                </tr>
+
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="Passwd" minlength="1" title="Please fill password between 0-9, a-z, A-Z, ก-ฮ" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>กรุณาพิมพ์ตามตัวเลขที่ปรากฎ : <div>1559</div></label> 
+                        <div><input type="text" name="Passwd" pattern="1559" title="Wrong number" required></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button><img src="image/login.jpg" style="width: 50px;"></button>
+        </div>
+    </form>
+</body>
+</html>
